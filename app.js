@@ -1,5 +1,5 @@
 let listaDeNumerosSorteados = [];
-let numeroLimite = 50;
+let numeroLimite = 30;
 let numeroSecreto = gerarNumeroAleatorio();
 let tentativas = 1;
 
@@ -18,7 +18,7 @@ campo.innerHTML = texto;
 
 function exibirmensagemInicial(){
      exibirTextoNaTela('h1', 'Jogo Do Número Secreto');
-     exibirTextoNaTela('p', 'Escolha um Número de 1 a 50');
+     exibirTextoNaTela('p', 'Escolha um Número de 1 a 30');
 }
 
 exibirmensagemInicial();
@@ -28,7 +28,7 @@ function verificarChute() {
     if (chute == numeroSecreto){
         exibirTextoNaTela('h1', 'Você Acertou!');
         let palavraTentativa = tentativas > 1 ? 'tentativas' : 'tentativa';
-        let mensagemtentativas = `Você descobriu o número secreto com ${tentativas} ${palavraTentativa}!`;
+        let mensagemtentativas = `Parabéns! Você descobriu o número secreto com ${tentativas} ${palavraTentativa}!`;
         exibirTextoNaTela('p', mensagemtentativas);
      } else {
             if (chute > numeroSecreto){
@@ -44,7 +44,7 @@ function verificarChute() {
     }
 
 function gerarNumeroAleatorio() {
-   return parseInt(Math.random() * 10 + 1);
+   return parseInt(Math.random() * 30 + 1);
 }
 
 function limparCampo() {
