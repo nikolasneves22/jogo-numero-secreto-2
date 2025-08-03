@@ -59,3 +59,4 @@ function reiniciarJogo() {
     document.getElementById('reinicia').setAttribute('disabled',true);
 
 }
+//tentativa
